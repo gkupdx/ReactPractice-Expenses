@@ -5,6 +5,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@emmetio/abbreviation": "2.3.1",
     "emmet": "2.3.6",
     "loader-utils": "3.2.1",
     "react": "18.2.0",
