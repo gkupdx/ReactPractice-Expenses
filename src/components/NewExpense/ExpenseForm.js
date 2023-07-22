@@ -42,8 +42,8 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: newInput.newTitle,
-      amount: newInput.newAmount,
-      date: newInput.newDate
+      amount: Number(newInput.newAmount),
+      date: new Date(newInput.newDate)
     };
     // on submit, use the callback function prop to send 'expenseData' to parent
     props.onSaveExpenseData(expenseData);
@@ -92,6 +92,9 @@ const ExpenseForm = (props) => {
 
       <div className="new-expense__actions">
         <button type="submit">Add Expense</button>
+        <button onClick={props.onCancel} type="button">
+          Cancel
+        </button>
       </div>
     </form>
   );
